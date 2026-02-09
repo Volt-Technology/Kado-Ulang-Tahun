@@ -31,7 +31,8 @@ void setup() {
     while (1) delay(10);
   }
 
-  //rtc.adjust(DateTime(2026, 2, 7, 23, 59, 55)); // -> manual
+  //rtc.adjust(DateTime(tahun, bulan, tanggal, jam, menit, detik)); // -> manual
+  //rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); // -> Setup Awal
   if (rtc.lostPower()) {
   rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); // -> otomatis
 }
